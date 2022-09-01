@@ -11,12 +11,12 @@ html {
 
 .box-1,
 .box-2 {
-    font-size: 4.0rem;
+    font-size: 4rem;
 }
 
 .box-1 {
     background-color: #EB5757;
-    border: 0 solid #9B51E0
+    border: 0 solid #9B51E0;
 }
 
 .box-2 {
