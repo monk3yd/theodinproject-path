@@ -1,9 +1,13 @@
+/* Good practice for ease of format */
 * {
-    /* Consider border and padding in total width */
+    /* Consider border and padding in total height & width */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* Note: always take into account that margin is not considered by CSS
+as part of the element. (border-box, height and width) */
 
 html {
     font-size: 62.5%;
@@ -16,10 +20,21 @@ html {
 
 .box-1 {
     background-color: #EB5757;
-    border: 0 solid #9B51E0;
+    /* Add space between padding and margin */
+    border: 2rem solid #9B51E0;
+    /* Add space to element background */
+    padding: 2rem;
+    /* Add space between elements */
+    margin: 2rem;
 }
-
+/* Note: take into account that margin between 2 or more elements collapses,
+and the higher margin is used between them. */
 .box-2 {
     background-color: #2D9CDB;
-    border: 0 solid #27AE60;
+    /* Add space between padding and margin */
+    border: 2rem solid #27AE60;
+    /* Add space to element background */
+    padding: 2rem;
+    /* Add space between elements */
+    margin: 2rem;
 }
