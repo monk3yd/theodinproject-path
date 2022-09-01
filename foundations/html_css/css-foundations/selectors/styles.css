@@ -1,0 +1,87 @@
+/* Universal Selector */
+* {
+  color: purple;
+}
+
+/* 
+  Type/Element Selectors:
+  Will select all elements of the given element type.
+*/
+div {
+  color: white;
+}
+
+/*
+  Class Selectors 
+  Class selectors will select all elements with the given class,
+  which is just an attribute you place on an HTML element.
+*/
+.alert-text {
+  color: red;
+}
+
+.severe-alert {
+  color: purple;
+  font-size: 1.2rem;
+}
+
+/*
+  ID Selectors
+  ID selectors are similar to class selectors. They select an element with the given ID,
+  which is another attribute you place on an HTML element.
+
+  There are cases where using an ID makes sense or is needed,
+  such as taking advantage of specificity or having links redirect to a section on the current page,
+  you should use IDs sparingly (if at all).
+  
+  A major difference between classes and IDs is that an element can only have one ID.
+  An ID cannot be repeated on a single page, and the ID attribute should not contain any whitespace at all.
+*/
+#title {
+  background-color: red;
+}
+
+/*
+  Grouping Selectors
+  Two groups of elements that share some of their style declarations.
+  Cut down on the repetition, we can group these two selectors together as a comma-separated list
+*/
+.read,
+.unread {
+  color: white;
+  background-color: black;
+}
+
+.read {
+  /* several unique declarations */
+}
+
+.unread {
+  /* several unique declarations */
+}
+
+/*
+  Chaining Selectors
+  We only want to apply a separate rule to the element that also has header as a second class
+  We can’t chain more than one type selector since an element can’t be two different types at once.
+*/
+
+.subsection.header {
+  color: red;
+}
+
+.subsection#preview {
+  color: blue;
+}
+
+/*
+  Descendant Combinator
+  Combinators allow us to combine multiple selectors differently than either grouping or chaining them,
+  as they show a relationship between the selectors.
+  There are four types of combinators in total, but for right now we’re going to only show you the descendant combinator.
+  Descendant combinator will only cause elements that match the last selector to be selected if they also have an ancestor (parent, grandparent, etc) that matches the previous selector.
+*/
+.ancestor .contents {
+  /* some declarations */
+  color: coral;
+}

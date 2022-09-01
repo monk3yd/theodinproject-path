@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+
+    <!-- Link CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>CSS Selectors</h1>
+
+    <div>Hello, World!</div>
+    <div>Hello again!</div>
+    <p>Hi...</p>
+    <div>Okay, bye.</div>
+
+   <!-- 1 class  -->
+    <div class="alert-text">
+      Please agree to our terms of service.
+    </div>
+      
+    <!-- Multiple space-separated classes -->
+    <div class="alert-text severe-alert">
+      Please agree to our terms of service.
+    </div>
+    
+    <!-- ID -->
+    <div id="title">
+      My Awesome 90's Page
+    </div>
+    
+    <!-- Grouping -->
+    <div class="read">
+      Some tryout text for explaining grouping selectors.
+    </div>
+
+    <div class="unread">
+      Another tryout text for explaining grouping selectors.
+    </div>
+
+    <!-- Chaining class/class -->
+    <div>
+      <div class="subsection header">Latest Posts</div>
+      <p class="subsection preview">This is where a preview for a post might go.</p>
+    </div>
+
+    <!-- Chaining class/id -->
+    <div>
+      <div class="subsection header">Latest Posts</div>
+      <p class="subsection" id="preview">This is where a preview for a post might go.</p>
+    </div>
+    
+    <!-- Descendant Combinator -->
+    <div class="ancestor"i> <!-- A -->
+      Contents A
+      <div class="contents"> <!-- B -->
+        Contents B
+        <div class="contents"> <!-- C --> Contents C</div>
+      </div>
+    </div>
+    
+    <div class="contents">Contents D</div> <!-- D -->
+  </body>
+</html>
