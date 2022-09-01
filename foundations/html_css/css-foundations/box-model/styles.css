@@ -1,0 +1,25 @@
+* {
+    /* Consider border and padding in total width */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.box-1,
+.box-2 {
+    font-size: 4.0rem;
+}
+
+.box-1 {
+    background-color: #EB5757;
+    border: 0 solid #9B51E0
+}
+
+.box-2 {
+    background-color: #2D9CDB;
+    border: 0 solid #27AE60;
+}
