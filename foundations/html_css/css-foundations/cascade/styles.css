@@ -1,0 +1,63 @@
+/* First */
+/* rule 1 */
+.subsection {
+  color: blue;
+}
+
+/* rule 2 more specific because it is using more class selectors */
+.main .list {
+  color: red;
+}
+/* EndFirst */
+
+/* Second */
+/* rule 1 more specific id > class */
+#subsection {
+  color: blue;
+}
+  
+/* rule 2 */
+.main .list {
+  color: red;
+}
+
+/* rule 1 */
+#subsection .list {
+  background-color: yellow;
+  color: blue;
+}
+
+/* rule 2  more specific because id selectors are =, but has + class selectors */
+#subsection .main .list {
+  color: red;
+}
+
+/* rule 1 same specificity*/
+.class.second-class {
+  font-size: 12px;
+}
+
+/* rule 2  same specificity*/
+.class .second-class {
+  font-size: 24px;
+}
+
+/* rule 1 same specificity*/
+.class.second-class {
+  font-size: 12px;
+}
+
+/* rule 2 same specificity*/
+.class > .second-class {
+  font-size: 24px;
+}
+
+/* rule 1 no specificity value */
+* {
+  color: black;
+}
+
+/* rule 2 higher specificity */
+h1 {
+  color: orange;
+}
