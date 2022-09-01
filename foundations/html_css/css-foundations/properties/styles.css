@@ -1,0 +1,45 @@
+/*
+  Color and Background Color
+
+  Accept keywords, HEX, RGB and HSL values
+  Adjust opacity through alpha value
+*/
+p {
+  /* hex example */
+  color: #1100ff;
+  /* rgb example */
+  color: rgb(100, 0, 127);
+  /* hsl example */
+  color: hsl(15, 82%, 56%);
+}
+
+/*
+  Typography Basics and Text-Align
+*/
+
+p {
+  /*
+  Accepts font family name or generic family name
+  Best practice to include a list of values for this property,
+  starting with the font you want to be used most and ending with a generic font family as a fallback 
+  */
+  font-family:'Courier New', Courier, monospace;
+  font-size: 22px;
+  /* Affects boldness of text, this value can be a keyword or a number between 1-1000 */
+  font-weight: bold;
+  font-weight: 700;
+  /* Align text horizontally within an element */
+  text-align: center;
+}
+
+/*
+  Image height and width
+  By default height and width will be the same as the image size.
+  For adjusting the image without causing lose of proportions use auto keyword in height property
+  It’s best practice to include both of these properties for <img> elements,
+  even if you don’t plan on adjusting the values from the image file’s original ones.
+*/
+img {
+  height: auto;
+  width: 500px;
+}
