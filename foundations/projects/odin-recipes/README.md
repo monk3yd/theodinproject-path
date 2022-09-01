@@ -7,3 +7,7 @@ To build an HTML webpage that contains recipes.
 - Basic git commands (status, add, commit, log, push)
 - Basic HTML boilerplate
 - Basic HTML elements (meta, title, headers, lists, links and images)
+- Import CSS stylesheet (link External CSS)
+- Import Google Fonts
+- Universal CSS Selector
+- Class CSS Selectors
