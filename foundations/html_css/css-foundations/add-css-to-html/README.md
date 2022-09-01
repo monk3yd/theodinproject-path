@@ -9,4 +9,5 @@
 3. Inline CSS: Inline CSS makes it possible to add styles directly to HTML elements, though this method isn’t as recommended:
     1. It can get pretty messy pretty quickly once you start adding a lot of declarations to a single element, causing your HTML file to become unnecessarily bloated.
     2. If you want many elements to have the same style, you would have to copy + paste the same style to each individual element, causing lots of unnecessary repetition and more bloat.
+    
     3. Any inline CSS will override the other two methods, which can cause unexpected results.
