@@ -2,6 +2,16 @@
 you'll learn about it later. */
 @import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
   background: #eee;
@@ -12,6 +22,25 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+}
+
+.logo {
+  color: rebeccapurple;
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.links {
+  display: flex;
+}
+
+.logo,
+.notifications {
+  margin-right: 1.4rem;
 }
 
 .profile-image {
@@ -22,11 +51,9 @@ body {
   height: 48px;
 }
 
-.logo {
-  color: rebeccapurple;
-  font-size: 32px;
-  font-weight: 900;
-  font-style: italic;
+.profile {
+  display: flex;
+  margin-left: auto;
 }
 
 button {
@@ -37,12 +64,14 @@ button {
   padding: 8px 24px;
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   /* this removes the line under our links */
   text-decoration: none;
   color: rebeccapurple;
-}
-
-ul {
-  list-style-type: none;
+  font-size: 1.4rem;
+  margin-right: 1.4rem;
 }
