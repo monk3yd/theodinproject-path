@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 html {
@@ -13,6 +13,7 @@ body {
     display: flex;
     height: 100vh;
     flex-direction: column;
+    font-size: 1.4rem;
 }
 
 ul {
@@ -23,6 +24,7 @@ ul {
 
 li {
     font-size: 1.8rem;
+    margin-left: 4rem;
 }
 
 a {
@@ -34,7 +36,7 @@ a {
     background-color: #1F2937;
     color: #F9FAF8;
     height: 100%;
-    padding: 2rem 20rem;
+    padding: 2rem 10rem;
 }
 
 .nav {
@@ -48,20 +50,44 @@ a {
     font-size: 2.4rem;
 }
 
+.main-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.container,
+.image-placeholder {
+  flex: 1;  
+  height: 30rem;
+}
+
+.main-text {
+    color: #F9FAF8;
+    font-size: 4.8rem;    
+}
+
 .secondary-text,
 .class a {
     color: #E5E7EB;
     font-size: 1.8rem;
 }
 
-.main-container {
+.image-placeholder {
     display: flex;
-    height: 100%;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: darkgrey;
 }
 
-.container,
-.image-placeholder {
-  flex: 1;  
+button {
+    background-color: #3882F6;
+    border: none;
+    border-radius: 5px;
+    color: #F9FAF8;
+    margin: 1rem 0;
+    padding: 0.4rem 2rem;
+
 }
