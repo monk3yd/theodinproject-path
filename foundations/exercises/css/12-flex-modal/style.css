@@ -33,7 +33,7 @@ body {
 }
 
 .first {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   justify-content: space-between;
 }
@@ -74,6 +74,10 @@ body {
 .text,
 .buttons {
   margin-left: 6.2rem;
+}
+
+.text {
+  margin-top: -1rem;
 }
 
 .buttons {
