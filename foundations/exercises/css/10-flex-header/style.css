@@ -9,8 +9,12 @@ html {
 }
 
 .header  {
-  font-family: monospace;
+  display: flex;
   background: papayawhip;
+  font-family: monospace;
+  justify-content: space-between;
+  margin: 0.7rem;
+  padding: 0 0.7rem;
 }
 
 .logo {
@@ -18,12 +22,23 @@ html {
   font-weight: 900;
   color: tomato;
   background: white;
+  margin: 0.7rem;
   padding: 4px 32px;
 }
 
+.left-links,
+.right-links {
+  align-items: center;
+  display: flex;
+  width: 24rem;
+}
+
 ul {
+  display: flex;
   /* this removes the dots on the list items*/
   list-style-type: none;
+  justify-content: space-between;
+  width: 100%;
 }
 
 a {
