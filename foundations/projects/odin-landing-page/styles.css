@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: auto;
+}
+
+li {
+    font-size: 1.8rem;
+}
+
+a {
+    color: #E5E7EB;
+    text-decoration: none;
+}
+
+.hero-section {
+    background-color: #1F2937;
+    color: #F9FAF8;
+    height: 100%;
+    padding: 2rem 20rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    color: inherit;
+    font-size: 2.4rem;
+}
+
+.secondary-text,
+.class a {
+    color: #E5E7EB;
+    font-size: 1.8rem;
+}
+
+.main-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container,
+.image-placeholder {
+  flex: 1;  
+}
