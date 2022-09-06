@@ -24,7 +24,7 @@ body {
   box-shadow: 0 0 8px rgba(0,0,0,.1);
   display: flex;
   align-items: center;
-  padding: 0.7rem 1rem;
+  padding: 0.8rem;
 }
 
 .logo {
@@ -40,7 +40,7 @@ body {
 
 .logo,
 .notifications {
-  margin-right: 1.4rem;
+  margin-right: 1.6rem;
 }
 
 .profile-image {
@@ -73,5 +73,5 @@ a {
   text-decoration: none;
   color: rebeccapurple;
   font-size: 1.4rem;
-  margin-right: 1.4rem;
+  margin-right: 1.6rem;
 }
