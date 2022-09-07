@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
 }
 
 html {
@@ -11,7 +10,6 @@ html {
 
 body {
     display: flex;
-    height: 100vh;
     flex-direction: column;
     font-size: 1.4rem;
 }
@@ -32,10 +30,11 @@ a {
     text-decoration: none;
 }
 
+/* Hero section */
 .hero-section {
     background-color: #1F2937;
     color: #F9FAF8;
-    height: 100%;
+    height: 100vh;
     padding: 2rem 10rem;
 }
 
@@ -89,5 +88,125 @@ button {
     color: #F9FAF8;
     margin: 1rem 0;
     padding: 0.4rem 2rem;
+}
 
+/* Information section */
+.information-section {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+}
+
+.info-heading {
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    font-size: 3.6rem;
+    font-weight: 900;
+    color: #1F2937;
+    margin: 5rem 10rem;
+}
+
+.cards {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.card-image {
+    border: 2px solid #3882F6;
+    border-radius: 5px;
+    height: 20rem;
+    width: 20rem;
+}
+
+.card-text {
+    color: #1F2937;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Quote section */
+.quote-section {
+    background-color: #E5E7EB;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15rem;
+}
+
+.quote-text {
+    color: #1F2937;
+    font-size: 3.6rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.quote-author {
+    margin-left: auto;
+    font-weight: 700;
+}
+
+/* Action section */
+.action-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 100vw;
+    font-size: 1.8rem;
+    color: #F9FAF8;
+}
+
+.action-background {
+    background-color: #3882F6;    
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    width: 90%;
+}
+
+.action-container {
+    display: flex;    
+    gap: 17rem;
+    justify-content: space-between;
+    flex: 1;
+    margin: 0 10rem;
+}
+
+.button-container {
+    margin-left: auto;
+}
+
+.action-button {
+    border: 1px solid white;
+}
+
+/* Footer section */
+.footer-section {
+    height: 10vh;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
