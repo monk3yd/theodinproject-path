@@ -41,6 +41,12 @@
     ]
 
     // Add your code here
+    for (const user of phonebook) {
+        if (user["name"] === name) {
+            para.textContent = `Name: ${user["name"]}, Number: ${user["number"]}`;
+            break;
+        }
+    }
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
