@@ -1,4 +1,16 @@
-const sumAll = function(min, max) {
+const sumAll = function(n1, n2) {
+    // assign for min and max
+    let min;
+    let max;
+
+    if (n1 < n2) {
+        min = n1;
+        max = n2;
+    } else {
+        min = n2;
+        max = n1;
+    }
+
     // Init counter
     let counter = 0; 
 
