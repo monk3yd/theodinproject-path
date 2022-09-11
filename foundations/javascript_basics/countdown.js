@@ -10,7 +10,7 @@ while (i >= 0)
 
     if (i === 10) {
         // populate paragraph
-        para.textContent = 'Countdown';
+        para.textContent = `Countdown ${i}`;
     } else if (i === 0) {
         para.textContent = 'Blast off!';
     } else {
