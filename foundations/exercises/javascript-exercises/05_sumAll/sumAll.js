@@ -1,4 +1,7 @@
 const sumAll = function(n1, n2) {
+    if (n1 < 0 || n2 < 0) {
+        return "ERROR";
+    }
     // assign for min and max
     let min;
     let max;
