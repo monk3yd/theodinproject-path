@@ -1,8 +1,11 @@
 const sumAll = function(n1, n2) {
-    if (n1 < 0 || n2 < 0) {
+    // Check for positive numbers
+    // Check for non-number parameters
+    if (n1 < 0 || n2 < 0 || typeof n1 != "number" || typeof n2 != "number") {
         return "ERROR";
     }
-    // assign for min and max
+
+    // Assign for min and max
     let min;
     let max;
 
