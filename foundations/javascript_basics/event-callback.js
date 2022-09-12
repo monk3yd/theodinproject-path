@@ -5,7 +5,6 @@ function alertFunction () {
     alert("YAY! YOU DID IT!");
 }
 
-
 // Method 2
 // btn.onclick = alertFunction;
 
@@ -13,5 +12,6 @@ const btn = document.querySelector(".btn");
 
 // Method 3
 btn.addEventListener('click', function (e) {
-    console.log(e.target);
+    // console.log(e.target);
+    e.target.style.background = 'blue';
 });
