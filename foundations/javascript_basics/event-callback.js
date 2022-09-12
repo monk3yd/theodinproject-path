@@ -8,10 +8,19 @@ function alertFunction () {
 // Method 2
 // btn.onclick = alertFunction;
 
-const btn = document.querySelector(".btn");
+// const btn = document.querySelector(".btn");
 
 // Method 3
-btn.addEventListener('click', function (e) {
-    // console.log(e.target);
-    e.target.style.background = 'blue';
+// btn.addEventListener('click', function (e) {
+//     // console.log(e.target);
+//     e.target.style.background = 'blue';
+// });
+
+
+const buttons = document.querySelectorAll('button');
+// Iterate through each button
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+    });
 });
