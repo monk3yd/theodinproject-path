@@ -1,7 +1,18 @@
+// DOM ---
+// Choice Results
+const resultsContainer = document.querySelector("#results");
+const paraPlayerResult = document.createElement("p");
+const paraComputerResult = document.createElement("p");
+
+// Score
+const scoreContainer = document.querySelector("#score-container");
+const paraScore = document.createElement("p");
+const paraMessage = document.createElement("p");
+
 // Computers turn
 function computerPlay() {
     // Array of possible NPC plays
-    let playsPossible = ["Rock", "Paper", "Scissor"];
+    let playsPossible = ["Rock", "Paper", "Scissors"];
 
     // Get random number between 0 and 2 inclusive
     const random = Math.floor(Math.random() * playsPossible.length);
@@ -12,64 +23,71 @@ function computerPlay() {
     return playsPossible[random];
 };
 
-// Players turn
-function playerSelection() {
-    // Get choice from player
-    let choice = prompt("Please enter 'Rock', 'Paper' or 'Scissor': ");
-    
-    // console.log(choice)
-
-    // return that choice
-    return choice;
-};
-
 // Start a round (1 move each player)
-function startRound(playerSelection, computerPlay) {
-    let playerChoice = playerSelection().toLowerCase();
+function startRound(playerChoice, computerPlay) {
+    playerChoice = playerChoice.toLowerCase();
     let computerChoice = computerPlay().toLowerCase();
-    
-    console.log(`Player makes: ${playerChoice}`);
-    console.log(`Computer makes ${computerChoice}`);
+
+    // Clean older result
+    paraPlayerResult.textContent = '';
+    paraComputerResult.textContent = '';
+
+    // Fill displayed result with player/computer choices
+    paraPlayerResult.textContent = `Player makes: ${playerChoice}`;
+    paraComputerResult.textContent = `Computer makes: ${computerChoice}`;
+
+    // Show results
+    resultsContainer.appendChild(paraPlayerResult);
+    resultsContainer.appendChild(paraComputerResult);
     
     // Check for winner
     if (playerChoice === computerChoice) {
         // Draw
         return 0;
-    } else if (playerChoice === "rock" && computerChoice === "scissor"  || playerChoice === "paper" && computerChoice === "rock" || playerChoice === "scissor" && computerChoice === "paper") {
+    } else if (playerChoice === "rock" && computerChoice === "scissors"  || playerChoice === "paper" && computerChoice === "rock" || playerChoice === "scissors" && computerChoice === "paper") {
         // Player win
         return 1;
+        // console.log(`Player wins round ${i + 1}`);
     } else {
         // PC win
         return 2;
+        // console.log(`Computer wins round ${i + 1}`);
     };
 };
 
-// Start game (series of rounds)
-function gameOn() {
-    // Counter score variables
-    let playerScore = 0;
-    let computerScore = 0;
+function checkWinner(playerScore, computerScore) {
+};
 
-    // Play 5 rounds
-    for (let i = 0; i < 5; i++) {
-        roundWinner = startRound(playerSelection, computerPlay);
-        // console.log(roundWinner);
-        
-        if (roundWinner === 0) {  // draw
-            console.log(`Round ${i + 1} is a draw`);
-        } else if (roundWinner === 1) {  // player wins
+// Counter score variables
+let playerScore = 0;
+let computerScore = 0;
+
+// Attach events to buttons
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        let choice = e.target.innerText;
+        let roundWinner = startRound(choice, computerPlay);
+
+        // Score
+        if (roundWinner === 1) {
             playerScore++;
-            console.log(`Player wins round ${i + 1}`);
-        } else {  // computer wins
+        } else if (roundWinner === 2) {
             computerScore++;
-            console.log(`Computer wins round ${i + 1}`);
-        };
-    };
+        }
+        paraScore.textContent = ``;
+        paraScore.textContent = `Player Score: ${playerScore} - Computer Score: ${computerScore}`;
+        scoreContainer.appendChild(paraScore);
 
-    // Announce winnner
-    if (playerScore > computerScore) {
-        console.log(`Player wins with a score of ${playerScore}/5`);
-    } else {
-        console.log(`Computer wins with a score of ${computerScore}/5`);
-    };
-};
+        // Check for game over
+        if (playerScore >= 5 || computerScore >= 5) {
+            // Announce winnner
+            if (playerScore > computerScore) {
+                paraMessage.textContent = `Game Over! Player wins with a score of ${playerScore}.`;
+            } else {
+                paraMessage.textContent = `Game Over! Computer wins with a score of ${computerScore}.`;
+            };
+            scoreContainer.appendChild(paraMessage);
+        }
+    });
+});
