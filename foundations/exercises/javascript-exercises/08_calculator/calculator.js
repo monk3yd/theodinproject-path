@@ -1,25 +1,28 @@
-const add = function() {
-	
-};
+const add = (n1, n2) => n1 + n2;
 
-const subtract = function() {
-	
-};
+const subtract = (n1, n2) => n1 - n2;
 
-const sum = function() {
-	
-};
+const sum = arr => arr.reduce((x, y) => x + y, 0);
 
-const multiply = function() {
+const multiply = arr => arr.reduce((x, y) => x * y, 1);
 
-};
+const power = (n1, n2) => n1 ** n2;
 
-const power = function() {
-	
-};
+const factorial = function(n) {
+    if (n === 0) {
+        return 1;
+    } else {
+        // Add all decresing numbers into array
+        let fact = [];
+        while (n > 0) {
+            fact.push(n);
+            n--;
+        }
+        factArray = [...fact];
 
-const factorial = function() {
-	
+        // Multiply all items in array
+        return factArray.reduce((a, b) => a * b, 1);
+    }
 };
 
 // Do not edit below this line
