@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Library</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Render Library-->
+  <table>
+    <thead>
+      <tr>
+        <th>TITLE</th>
+        <th>AUTHOR</th>
+        <th>PAGES</th>
+        <th>READ</th>
+        <th>TOGGLE READ</th>
+        <th>REMOVE BOOK</th>
+      </tr>
+    </thead>
+    <tbody id="result"></tbody>
+  </table>
+
+  <!-- New book btn -->
+  <div id="btn-container"></div>
+
+  <!-- Add new book form -->
+  <form id="form" style="display: none;">
+    <div>
+      <label for="">Title: </label>
+      <input class="form-title" type="text" name="" value="" />
+    </div>
+    <div>
+      <label for="">Author: </label>
+      <input class="form-author" type="text" name="" value="" />
+    </div>
+    <div>
+      <label for="">Pages: </label>
+      <input class="form-pages" type="number" name="" value="" />
+    </div>
+    <div>
+      <label for="">Read: </label>
+      <input class="form-read" type="checkbox" name="" value="" />
+    </div>
+    <div>
+      <input id="form-btn" type="submit" name="" value="submit">
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+
+</html>

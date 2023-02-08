@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+table, th, td {
+  border: 1px solid;
+  padding: 1rem;
+  border-collapse: collapse;
+}
